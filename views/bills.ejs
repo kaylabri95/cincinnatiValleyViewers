@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
+    <h1>Bills</h1>
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
@@ -18,11 +18,11 @@
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
-    <h3>How many stars are in the sky?</h3>
+    <h2><%= user.userName %> has <%= left %> bills left to pay this cycle.</h2>
+    <h3>Be sure not to overdraft by staying on top of your bills</h3>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+    <form action="/todos/createBill" method='POST'>
+        <input type="text" placeholder="Enter bill" name='billItem'>
         <input type="submit">
     </form>
 
